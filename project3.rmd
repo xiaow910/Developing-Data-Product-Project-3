@@ -1,0 +1,44 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: "Xiao Wang"
+date: "April 25.2019"
+theme: cerulean
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+##Overview
+
+Using the `iris` dataset to understand the relationship between (`Sepal.Width`) and (`Sepal.Length`).
+
+##Read in the Data
+```{r}
+suppressMessages(library(plotly))
+data("iris")
+head(iris)
+```
+##Visualizing the Data
+```{r}
+plot_ly(iris, x = ~Sepal.Length, y = ~Sepal.Width, 
+        type = "scatter", mode = "markers", color = ~Petal.Length)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
